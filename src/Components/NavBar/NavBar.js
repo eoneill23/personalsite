@@ -4,7 +4,8 @@ import './NavBar.scss';
 function NavBar() {
   return (
     <nav className="nav">
-      <p>NAV BAR</p>
+      <h1 className="main-title">ERIC O'NEILL</h1>
+      <h3 className="sub-title">SOFTWARE DEVELOPER</h3>
     </nav>
   )
 }

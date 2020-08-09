@@ -1,7 +1,22 @@
 @import '../../variables';
 
 .nav {
+  align-items: center;
   background-color: $main;
+  height: 15%;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-title {
+  color: $primary-font-color;
+  display: block;
+  margin-top: 0;
+}
+
+.sub_title {
   color: white;
-  height: 100%;
+  display: block;
+  font-weight:normal;
+  margin-top: 0;
 }
