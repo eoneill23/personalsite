@@ -1,11 +1,17 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
 
 function NavBar() {
   return (
     <nav className="nav">
       <h1 className="main-title">ERIC O'NEILL</h1>
-      <h3 className="sub-title">SOFTWARE DEVELOPER</h3>
+      <div className="link-container">
+        <NavLink to='/' className="nav-link">Home</NavLink>
+        <NavLink to='/about' className="nav-link">About</NavLink>
+        <NavLink to='/experience' className="nav-link">Experience</NavLink>
+        <NavLink to='/contact' className="nav-link">Contact</NavLink>
+      </div>
     </nav>
   )
 }
