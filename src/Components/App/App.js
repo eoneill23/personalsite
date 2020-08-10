@@ -10,6 +10,7 @@ function App() {
     <main className="main">
       <NavBar />
       <Route exact path='/' render={() => <Content pageContent={content.homeContent} />} />
+      <Route exact path='/about' render={() => <Content pageContent= {content.aboutContent} />} />
     </main>
   );
 }
