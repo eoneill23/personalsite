@@ -1,38 +1,46 @@
 import React, { useEffect, useState } from 'react';
-//import { fetch, fetchLazy } from 'fetch-github-repositories';
+import { fetchRepos } from '../../utils/api-calls'
 import './Content.scss';
+import pageContent from '../../content'
+import RepoListItem from '../RepoListItem/RepoListItem';
 
-const Content = ({pageContent}) => {
+const Content = () => {
+  //{pageContent}
   const [githubRepos, setGitHubRepos] = useState([])
-  const {title, content, secondaryContent, tertiaryContent} = pageContent
+  const {homeContent, aboutContent} = pageContent
 
-  const getRepos = () => {
-    fetch('https://api.github.com/users/eoneill23/repos')
-      .then(response => response.json())
-      .then(data => console.log('AHHHHHH', data))
-    //console.log('AHHHHHHH', repos)
+  const getGitHubRepos = async () => {
+    const repos = await fetchRepos();
+    console.log('AHHHH', repos)
+    // const styledRepos = repos.map((repo) => {
+    //   return <RepoListItem repoitem = {repo} />
+    // });
+    //setGitHubRepos(styledRepos)
   }
 
-  useEffect(() => {
-    getRepos()
-    // for (const repo of fetchLazy("fraxken")) {
-    //   console.log(repo.full_name);
-    // }
-
+  useEffect(()  => {
+    getGitHubRepos();
   });
 
   return (
-    <section className = "main-content">
-      <h2 className="">{title}</h2>
+    <section className = "main-content"> 
+      <h2 className="">{homeContent.title}</h2>
       <p>
-        {content}
+        {homeContent.content}
       </p>
-        {secondaryContent && <p>
-          {secondaryContent}
-        </p>}
-      {tertiaryContent && <p>
-        {tertiaryContent}
-      </p>}
+      <p>
+        {aboutContent.secondaryContent}
+      </p>
+      <p>
+        {aboutContent.tertiaryContent}
+      </p>
+      <ul>
+        {githubRepos}
+      </ul>
+      <section>
+        Github
+        LinkedIn
+    </section>
     </section >
   );
 }

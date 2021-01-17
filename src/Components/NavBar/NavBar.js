@@ -9,7 +9,6 @@ function NavBar() {
       <div className="link-container">
         <NavLink to='/' className="nav-link">Home</NavLink>
         <NavLink to='/about' className="nav-link">About</NavLink>
-        <NavLink to='/experience' className="nav-link">Experience</NavLink>
         <NavLink to='/contact' className="nav-link">Contact</NavLink>
       </div>
     </nav>
