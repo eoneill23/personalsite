@@ -5,17 +5,17 @@ import pageContent from '../../content'
 import RepoListItem from '../RepoListItem/RepoListItem';
 
 const Content = () => {
-  //{pageContent}
   const [githubRepos, setGitHubRepos] = useState([])
   const {homeContent, aboutContent} = pageContent
 
   const getGitHubRepos = async () => {
     const repos = await fetchRepos();
-    console.log('AHHHH', repos)
-    const styledRepos = repos.map((repo) => {
-      return <RepoListItem repoitem = {repo} />
-    });
-    setGitHubRepos(styledRepos)
+    if (repos.length) {
+      const styledRepos = repos.map((repo) => {
+        return <RepoListItem repoitem = {repo} />
+      });
+      setGitHubRepos(styledRepos)
+    }
   }
 
   useEffect(()  => {
@@ -27,6 +27,7 @@ const Content = () => {
       <h2 className="">{homeContent.title}</h2>
       <p>
         {homeContent.content}
+        {/* TODO: Add headshot/image */}
       </p>
       <p>
         {aboutContent.secondaryContent}
@@ -34,13 +35,12 @@ const Content = () => {
       <p>
         {aboutContent.tertiaryContent}
       </p>
-      <ul>
-        {githubRepos}
-      </ul>
       <section>
-        Github
-        LinkedIn
-    </section>
+        <h3>Check out my GitHub Repos:</h3>
+        <ul>
+          {githubRepos}
+        </ul>
+      </section>
     </section >
   );
 }

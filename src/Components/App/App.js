@@ -9,8 +9,15 @@ function App() {
   return (
     <main className="main">
       <NavBar />
-      <Route exact path='/' render={() => <Content pageContent={content.homeContent} />} />
-      <Route exact path='/about' render={() => <Content pageContent= {content.aboutContent} />} />
+      <Content />
+      {/* <Route exact path='/' render={() => <Content pageContent={content.homeContent} />} />
+      <Route exact path='/about' render={() => <Content pageContent= {content.aboutContent} />} /> */}
+      <section className="contact-info">
+        <h3 className="">Contact</h3>
+        Github
+        LinkedIn
+        {/* TODO: Add GH/LI logos and style */}
+      </section>
     </main>
   );
 }
