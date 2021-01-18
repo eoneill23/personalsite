@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RepoListItem = ({repoListItem}) => {
+const RepoListItem = (repoListItem) => {
   const { fullname, url, description } = repoListItem
   return (
     <li>

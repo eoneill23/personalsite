@@ -12,15 +12,15 @@ const Content = () => {
   const getGitHubRepos = async () => {
     const repos = await fetchRepos();
     console.log('AHHHH', repos)
-    // const styledRepos = repos.map((repo) => {
-    //   return <RepoListItem repoitem = {repo} />
-    // });
-    //setGitHubRepos(styledRepos)
+    const styledRepos = repos.map((repo) => {
+      return <RepoListItem repoitem = {repo} />
+    });
+    setGitHubRepos(styledRepos)
   }
 
   useEffect(()  => {
     getGitHubRepos();
-  });
+  }, []);
 
   return (
     <section className = "main-content"> 
