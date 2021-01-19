@@ -9,10 +9,11 @@ const Content = () => {
   const {homeContent, aboutContent} = pageContent
 
   const getGitHubRepos = async () => {
-    const repos = await fetchRepos();
+    let repos = await fetchRepos();
     if (repos.length) {
-      const styledRepos = repos.map((repo) => {
-        return <RepoListItem repoitem = {repo} />
+      repos = repos.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)).slice(0, 10);
+      const styledRepos = repos.map((repo, index) => {
+        return <RepoListItem key={index} repoItem={repo} />
       });
       setGitHubRepos(styledRepos)
     }
