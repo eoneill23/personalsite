@@ -5,7 +5,19 @@
 }
 
 body {
+  animation: fadeInAnimation ease 3s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
   font-family: $primary-font;
   height: 100vh;
   margin: 0;
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
 }

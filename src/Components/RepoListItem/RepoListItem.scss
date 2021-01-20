@@ -1,6 +1,15 @@
 @import '../../variables';
 
 .repo-list-item {
+  border: 1px solid $main;
+  box-shadow: 1px 2px;
   color: $main;
-  width: 33%;
+  height: 15em;
+  margin: 1em;
+  padding: 1.5em;
+  transition: transform .3s;
+  width: 30%;
+  &:hover {
+    transform: scale(1.03)
+  }
 }
