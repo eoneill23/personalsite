@@ -6,3 +6,18 @@
   padding: 1em;
   width: 50%;
 }
+
+.github-repo-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  //flex-direction: row;
+  width: 100%;
+  //overflow: wrap;
+}
+
+.github-repo-list-container {
+  color: $main;
+  letter-spacing: .01em;
+  text-align: center;
+}

@@ -12,12 +12,12 @@ function App() {
       <Content />
       {/* <Route exact path='/' render={() => <Content pageContent={content.homeContent} />} />
       <Route exact path='/about' render={() => <Content pageContent= {content.aboutContent} />} /> */}
-      <section className="contact-info">
+      <footer className="contact-info">
         <h3 className="">Contact</h3>
         Github
         LinkedIn
         {/* TODO: Add GH/LI logos and style */}
-      </section>
+      </footer>
     </main>
   );
 }
