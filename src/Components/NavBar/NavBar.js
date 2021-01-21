@@ -1,15 +1,19 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './NavBar.scss';
 
-function NavBar() {
+function NavBar({scrollTo}) {
+  let myRef = useRef();
+  console.log('WOOOO', myRef)
+  // /onClick={(e) => scrollTo(e)}
+
   return (
     <nav className="nav">
       <h1 className="main-title">ERIC O'NEILL</h1>
       <div className="link-container">
-        <NavLink to='/' className="nav-link">Home</NavLink>
-        <NavLink to='/about' className="nav-link">About</NavLink>
-        <NavLink to='/contact' className="nav-link">Contact</NavLink>
+        <a href="#home" className="nav-link">Home</a>
+        <a href="#about" className="nav-link">About</a>
+        <a href="#contact" className="nav-link">Contact</a>
       </div>
     </nav>
   )
