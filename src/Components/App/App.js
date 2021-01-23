@@ -1,9 +1,10 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import Content from '../Content/Content';
-import ghLogo from '../../images/github.svg';
-import liLogo from '../../images/linkedin.svg';
-import resume from '../../images/resume.svg';
+import ghLogo from '../../assets/github.svg';
+import liLogo from '../../assets/linkedin.svg';
+import resume from '../../assets/resume.svg';
+import resumePDF from '../../assets/Eric_ONeill_Resume.pdf'
 import './App.scss';
 
 function App() {
@@ -12,13 +13,29 @@ function App() {
     <main className="main">
       <NavBar />
       <Content />
-      {/* <Route exact path='/' render={() => <Content pageContent={content.homeContent} />} />
-      <Route exact path='/about' render={() => <Content pageContent= {content.aboutContent} />} /> */}
       <footer className="footer-contact" id="contact">
-        <h3>Contact</h3>
-        <img src={ghLogo} className="contact-img"></img>
-        <img src={liLogo} className="contact-img"></img>
-        <img src={resume} className="contact-img"></img>
+        <h3 className="contact-header">Contact</h3>
+        <a href="https://github.com/eoneill23" target="_blank" rel="noopener noreferrer">
+          <img
+            alt="A small vector of the GitHub logo. It is Linked to Eric O'Neill's GitHub profile." 
+            className="contact-img"
+            src={ghLogo} 
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/eoneill23" target="_blank" rel="noopener noreferrer">
+          <img 
+            alt="A small vector of the LinkedIn logo. It is linked to Eric O'Neill's LinkedIn profile."
+            className="contact-img"
+            src={liLogo} 
+          />
+        </a>
+        <a href={resumePDF} target="_blank" rel="noopener noreferrer">
+          <img 
+            alt="A small vector of a resume. It is linked to a PDF version of Eric O'Neill's resume."
+            className="contact-img"
+            src={resume} 
+            />
+        </a>
       </footer>
     </main>
   );

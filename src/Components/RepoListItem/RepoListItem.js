@@ -6,13 +6,13 @@ const RepoListItem = ({repoItem}) => {
   return (
     <li className="repo-list-item">
       <h3>
-        <a href={html_url} target="_blank">{full_name}</a>
+        <a href={html_url} target="_blank" rel="noopener noreferrer">
+          {full_name}
+        </a>
       </h3>
-      <p>
-        {description}
-      </p>
+      <p>{description}</p>
     </li>
-  )
+  );
 }
 
 export default RepoListItem;

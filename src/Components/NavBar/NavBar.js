@@ -1,11 +1,7 @@
-import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import './NavBar.scss';
 
-function NavBar({scrollTo}) {
-  let myRef = useRef();
-  console.log('WOOOO', myRef)
-  // /onClick={(e) => scrollTo(e)}
+function NavBar() {
 
   return (
     <nav className="nav">
