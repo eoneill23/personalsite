@@ -15,26 +15,34 @@ function App() {
       <Content />
       <footer className="footer-contact" id="contact">
         <h3 className="contact-header">Contact</h3>
-        <a href="https://github.com/eoneill23" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/eoneill23"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
-            alt="A small vector of the GitHub logo. It is Linked to Eric O'Neill's GitHub profile." 
+            alt="A small vector of the GitHub logo. It is Linked to Eric O'Neill's GitHub profile."
             className="contact-img"
-            src={ghLogo} 
+            src={ghLogo}
           />
         </a>
-        <a href="https://www.linkedin.com/in/eoneill23" target="_blank" rel="noopener noreferrer">
-          <img 
+        <a
+          href="https://www.linkedin.com/in/eoneill23"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
             alt="A small vector of the LinkedIn logo. It is linked to Eric O'Neill's LinkedIn profile."
             className="contact-img"
-            src={liLogo} 
+            src={liLogo}
           />
         </a>
         <a href={resumePDF} target="_blank" rel="noopener noreferrer">
-          <img 
+          <img
             alt="A small vector of a resume. It is linked to a PDF version of Eric O'Neill's resume."
             className="contact-img"
-            src={resume} 
-            />
+            src={resume}
+          />
         </a>
       </footer>
     </main>
