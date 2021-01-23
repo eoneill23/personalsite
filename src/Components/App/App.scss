@@ -3,9 +3,16 @@
 .main {
   background-color: white;
   letter-spacing: .3em;
+  padding-bottom: 3rem;
 }
 
 #contact {
+  color: $main;
   letter-spacing: .1em;
   text-align: center;
+}
+
+.contact-img {
+  height: 3rem;
+  width: 3rem;
 }

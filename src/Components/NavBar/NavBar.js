@@ -12,7 +12,7 @@ function NavBar({scrollTo}) {
       <h1 className="main-title">ERIC O'NEILL</h1>
       <div className="link-container">
         <a href="#home" className="nav-link">Home</a>
-        <a href="#about" className="nav-link">About</a>
+        <a href="#skills-github" className="nav-link">Skills/GitHub</a>
         <a href="#contact" className="nav-link">Contact</a>
       </div>
     </nav>

@@ -28,11 +28,14 @@ const Content = () => {
 
   return (
     <section>
-      <section className="main-content"> 
+      <section className="main-content" id="home"> 
         <h2 className="">{homeContent.title}</h2>
         <p>
           {homeContent.content}
           {/* TODO: Add headshot/image */}
+        </p>
+        <p>
+          {aboutContent.content}
         </p>
         <p>
           {aboutContent.secondaryContent}
@@ -41,7 +44,7 @@ const Content = () => {
           {aboutContent.tertiaryContent}
         </p>
       </section >
-      <section className="github-repo-list-container">
+      <section className="github-repo-list-container" id="skills-github">
         <h3>Check out my recent work on GitHub:</h3>
         <ul className="github-repo-list">
           {githubRepos}
