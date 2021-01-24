@@ -24,12 +24,11 @@ const Content = () => {
   }
 
   const displaySkills = () => {
-    const skillsArray = Object.keys(skills)
+    const skillsArray = Object.keys(skills);
     const skillComponents = skillsArray.map((skill, index) => {
-      console.log('SKILLSARRAY', skills[skill])
       return <Skill key={index} skillObj={skills[skill]}/>
     });
-    setSkills(skillComponents)
+    setSkills(skillComponents);
   }
 
   useEffect(()  => {
@@ -39,32 +38,23 @@ const Content = () => {
 
   return (
     <section>
-      <section className="main-content" id="home"> 
+      <section className="main-content" id="home">
         <h2 className="">{homeContent.title}</h2>
         <p>
           {homeContent.content}
           {/* TODO: Add headshot/image */}
         </p>
-        <p>
-          {aboutContent.content}
-        </p>
-        <p>
-          {aboutContent.secondaryContent}
-        </p>
-        <p>
-          {aboutContent.tertiaryContent}
-        </p>
-      </section >
+        <p>{aboutContent.content}</p>
+        <p>{aboutContent.secondaryContent}</p>
+        <p>{aboutContent.tertiaryContent}</p>
+      </section>
       <section className="skills">
-        <ul className="skills-list">
-          {skillList}
-        </ul>
+        <h3>My skills include:</h3>
+        <ul className="skills-list">{skillList}</ul>
       </section>
       <section className="github-repo-list-container" id="skills-github">
         <h3>Check out my recent work on GitHub:</h3>
-        <ul className="github-repo-list">
-          {githubRepos}
-        </ul>
+        <ul className="github-repo-list">{githubRepos}</ul>
       </section>
     </section>
   );
