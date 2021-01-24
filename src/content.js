@@ -1,4 +1,4 @@
-const pageContent = {
+export const pageContent = {
   homeContent: {
     title: 'Hello! I\'m Eric.',
     content: 'I am a former communications and marketing professional- turned software developer fascinated by the problem-solving and continual learning aspects of programming.'
@@ -11,4 +11,11 @@ const pageContent = {
   }
 }
 
-export default pageContent;
+export const skills = [
+  'React',
+  'Angular',
+  'SQL',
+  'CSS',
+  'HTML5',
+  'Node.JS'
+];

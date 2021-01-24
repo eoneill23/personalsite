@@ -2,10 +2,10 @@
 
 .repo-list-item {
   border: 1px solid $main;
+  border-radius: 2%;
   color: $main;
   height: 15em;
   margin: 1em;
-  padding: 1.5em;
   transition: transform .3s;
   width: 30%;
   &:hover {
@@ -17,4 +17,28 @@
 .repo-languages {
   list-style-type: none;
   padding: 0;
+}
+
+.repo-list-item-header {
+  background-color: $main;
+  color: $primary-font-color;
+  height: 25%;
+  padding: 1em;
+}
+
+.repo-list-item-h3 {
+  color: $primary-font-color;
+  margin: 0;
+}
+
+// .repo-list-item-link {
+//   text-decoration: none;
+// }
+
+.repo-list-item-link:visited {
+  color: $primary-font-color;
+}
+
+.repo-list-item-content {
+  padding: 0 0 1.5em 0;
 }

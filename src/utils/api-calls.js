@@ -11,7 +11,6 @@ export const fetchRepos = async () => {
 export const fetchRepoLanguages = async(languagesUrl) => {
   try {
     const response = await fetch(languagesUrl);
-        console.log("RESPONSE", response);
     const repoLanguages = response.json();
     return repoLanguages;
   } catch (error) {
