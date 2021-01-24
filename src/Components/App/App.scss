@@ -15,7 +15,13 @@
 .contact-img {
   height: 2rem;
   margin: 0 .5rem 0 .5rem;
+  transition: background 0.5s, transform 0.5s ease-out, fill 0.5s;
   width: 2rem;
+}
+
+.contact-img:hover {
+    transform: scale(1.2);
+    transition: background 0.5s, transform 0.3s ease-out, fill 0.5s;
 }
 
 .contact-header {

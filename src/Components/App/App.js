@@ -41,6 +41,7 @@ function App() {
           <img
             alt="A small vector of a resume. It is linked to a PDF version of Eric O'Neill's resume."
             className="contact-img"
+            color={"#ff0000"}
             src={resume}
           />
         </a>
