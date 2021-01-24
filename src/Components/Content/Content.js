@@ -24,8 +24,10 @@ const Content = () => {
   }
 
   const displaySkills = () => {
-    const skillComponents = skills.map((skill, index) => {
-      return <Skill key={index} skill={skill}/>
+    const skillsArray = Object.keys(skills)
+    const skillComponents = skillsArray.map((skill, index) => {
+      console.log('SKILLSARRAY', skills[skill])
+      return <Skill key={index} skillObj={skills[skill]}/>
     });
     setSkills(skillComponents)
   }

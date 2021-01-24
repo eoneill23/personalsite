@@ -1,3 +1,10 @@
+import react from '../src/assets/React.svg';
+import angular from '../src/assets/Angular.svg';
+import sql from '../src/assets/SQL.svg';
+import html from '../src/assets/HTML.svg';
+import css from '../src/assets/CSS.svg';
+import nodejs from '../src/assets/NodeJS.svg';
+
 export const pageContent = {
   homeContent: {
     title: 'Hello! I\'m Eric.',
@@ -11,11 +18,29 @@ export const pageContent = {
   }
 }
 
-export const skills = [
-  'React',
-  'Angular',
-  'SQL',
-  'CSS',
-  'HTML5',
-  'Node.JS'
-];
+export const skills = {
+  "React": {
+    skill: 'React',
+    image: react,
+  },
+  "Angular": {
+    skill: 'Angular',
+    image: angular,
+  },
+  "SQL": {
+    skill: 'SQL',
+    image: sql,
+  },
+  "CSS": {
+    skill: 'CSS',
+    image: css,
+  },
+  "HTML5": {
+    skill: 'HTML5',
+    image: html,
+  },
+  "Node.JS": {
+    skill: 'Node.JS',
+    image: nodejs,
+  }
+};
