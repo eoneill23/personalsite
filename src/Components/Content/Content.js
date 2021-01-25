@@ -48,9 +48,11 @@ const Content = () => {
         <p>{aboutContent.secondaryContent}</p>
         <p>{aboutContent.tertiaryContent}</p>
       </section>
-      <section className="skills">
-        <h3>My skills include:</h3>
-        <ul className="skills-list">{skillList}</ul>
+      <section className="skills" id="skills">
+        <h3 className="skills-header">My skills include:</h3>
+        <ul className="skills-list">
+          {skillList}
+        </ul>
       </section>
       <section className="github-repo-list-container" id="skills-github">
         <h3>Check out my recent work on GitHub:</h3>

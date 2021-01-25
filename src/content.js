@@ -4,6 +4,10 @@ import sql from '../src/assets/SQL.svg';
 import html from '../src/assets/HTML.svg';
 import css from '../src/assets/CSS.svg';
 import nodejs from '../src/assets/NodeJS.svg';
+import mocha from '../src/assets/Mocha.svg';
+import chai from '../src/assets/Chai.svg';
+import jest from '../src/assets/Jest.svg';
+import enzyme from '../src/assets/Enzyme.svg';
 
 export const pageContent = {
   homeContent: {
@@ -42,5 +46,21 @@ export const skills = {
   "Node.JS": {
     skill: 'Node.JS',
     image: nodejs,
+  },
+  "Mocha": {
+    skill: 'Mocha',
+    image: mocha,
+  },
+  "Chai": {
+    skill: "Chai",
+    image: chai,
+  },
+  "Jest": {
+    skill: "Jest",
+    image: jest,
+  },
+  "Enzyme": {
+    skill: "Enzyme",
+    image: enzyme,
   }
 };

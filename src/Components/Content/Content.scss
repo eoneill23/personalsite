@@ -22,3 +22,23 @@
   padding: 1em;
   text-align: center;
 }
+
+.skills {
+  height: 15em;
+  letter-spacing: .01em;
+  margin: auto;
+  width: 60%;
+}
+
+.skills-header {
+  color: $main;
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+}

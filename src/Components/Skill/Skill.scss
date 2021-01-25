@@ -1,4 +1,24 @@
+@import '../../variables';
+
 .skill-logo {
   height: 1.3em;
+  margin: 0 0 .5em .5em;
   width: 1.3em;
+}
+
+.skill-list-item {
+  align-items: center;
+  border: 1px solid $main;
+  border-radius: 5%;
+  display: flex;
+  font-weight: $heavy-font-weight;
+  height: 3em;
+  justify-content: center;
+  margin-bottom: 1.5em;
+  transition: transform .3s;
+  width: 10em;
+  &:hover {
+    box-shadow: 1px 1px;
+    transform: scale(1.01)
+  }
 }
