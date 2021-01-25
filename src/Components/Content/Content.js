@@ -9,11 +9,13 @@ import mockGhData from '../../utils/mockGHData';
 const Content = () => {
   const [githubRepos, setGitHubRepos] = useState([]);
   const [skillList, setSkills] = useState([]);
+  const [isLoadingRepos, setLoadingRepos] = useState(true)
   const { homeContent, aboutContent } = pageContent;
 
   const getGitHubRepos = async () => {
-    //let repos = await fetchRepos();
-    let repos = mockGhData;
+    let repos = await fetchRepos();
+    setLoadingRepos(false);
+    //let repos = mockGhData;
     if (repos.length) {
       repos = repos.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)).slice(0, 9);
       const styledRepos = repos.map((repo, index) => {
@@ -50,13 +52,26 @@ const Content = () => {
       </section>
       <section className="skills" id="skills">
         <h3 className="skills-header">My skills include:</h3>
-        <ul className="skills-list">
-          {skillList}
-        </ul>
+        <ul className="skills-list">{skillList}</ul>
       </section>
       <section className="github-repo-list-container" id="skills-github">
         <h3>Check out my recent work on GitHub:</h3>
-        <ul className="github-repo-list">{githubRepos}</ul>
+        {isLoadingRepos && <h3>Loading repos...</h3>}
+        {githubRepos.length && (
+          <ul className="github-repo-list">{githubRepos}</ul>
+        )}
+        {!isLoadingRepos && !githubRepos.length && (
+            <h3>
+              Whoops! It looks like I hit my rate limit with the GitHub API.
+              <a
+                href="https://www.github.com/eoneill23"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Check out my Github repo here.
+              </a>
+            </h3>
+          )}
       </section>
     </section>
   );

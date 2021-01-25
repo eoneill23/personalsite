@@ -8,15 +8,16 @@ const RepoListItem = ({repoItem}) => {
 
   const splitFullName = full_name.split('/')
   const shortenedFullName = splitFullName[1].charAt(0).toUpperCase() + splitFullName[1].slice(1);
-  // const getGitHubLanguages = async () => {
-  //   const response = await fetchRepoLanguages(languages_url);
-  //   const repoLanguages = Object.keys(response)
-  //   setRepoLanguages(repoLanguages)
-  // }
+  const getGitHubLanguages = async () => {
+    const response = await fetchRepoLanguages(languages_url);
+    const repoLanguages = Object.keys(response);
+    console.log('AHHHH', repoLanguages)
+    setRepoLanguages(repoLanguages);
+  }
 
-  // useEffect(() => {
-  //   getGitHubLanguages();
-  // }, []);
+  useEffect(() => {
+    getGitHubLanguages();
+  }, []);
 
   return (
     <li className="repo-list-item">
@@ -36,7 +37,7 @@ const RepoListItem = ({repoItem}) => {
           <p>{description}</p>
           <h3>Built with:</h3>
           <ul className="repo-languages">
-            {repoLangs.map((language, index) => {
+            {repoLanguages && repoLanguages.map((language, index) => {
               return <li key={index}>{language}</li>;
             })}
           </ul>

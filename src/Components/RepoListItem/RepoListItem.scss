@@ -4,7 +4,7 @@
   border: 1px solid $main;
   border-radius: 2%;
   color: $main;
-  height: 15em;
+  height: 17em;
   margin: 1em;
   transition: transform .3s;
   width: 30%;
@@ -23,7 +23,7 @@
   background-color: $main;
   color: $primary-font-color;
   height: 25%;
-  padding: 1em;
+  padding: 1.5em 1em 0 1em;
 }
 
 .repo-list-item-h3 {
@@ -31,8 +31,11 @@
   margin: 0;
 }
 
-.repo-list-item-link:visited {
+.repo-list-item-link {
   color: $primary-font-color;
+  &:visited {
+  color: $primary-font-color;
+}
 }
 
 .repo-list-item-content {
