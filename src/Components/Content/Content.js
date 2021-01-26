@@ -57,16 +57,17 @@ const Content = () => {
       <section className="github-repo-list-container" id="skills-github">
         <h3>Check out my recent work on GitHub:</h3>
         {isLoadingRepos && <h3>Loading repos...</h3>}
-        {githubRepos.length && (
+        {githubRepos && (
           <ul className="github-repo-list">{githubRepos}</ul>
         )}
         {!isLoadingRepos && !githubRepos.length && (
             <h3>
-              Whoops! It looks like I hit my rate limit with the GitHub API.
+              Whoops! It looks like I hit my rate limit with the GitHub API. 
               <a
                 href="https://www.github.com/eoneill23"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="github-link"
               >
                 Check out my Github repo here.
               </a>

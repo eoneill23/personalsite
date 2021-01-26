@@ -11,7 +11,6 @@ const RepoListItem = ({repoItem}) => {
   const getGitHubLanguages = async () => {
     const response = await fetchRepoLanguages(languages_url);
     const repoLanguages = Object.keys(response);
-    console.log('AHHHH', repoLanguages)
     setRepoLanguages(repoLanguages);
   }
 

@@ -28,6 +28,14 @@
   letter-spacing: .01em;
   margin: auto;
   width: 60%;
+  @include desktop {  
+    height: 12em; 
+    margin-bottom: 6em;
+    width: 50%; 
+  }
+  @include landscape-tablet {
+    padding: 0 2em 0 2em;
+  }
 }
 
 .skills-header {
@@ -41,4 +49,8 @@
   list-style-type: none;
   justify-content: space-around;
   padding: 0;
+}
+
+.github-link {
+  margin-left: .5em;
 }

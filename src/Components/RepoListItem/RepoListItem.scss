@@ -12,6 +12,9 @@
     box-shadow: 1px 2px;
     transform: scale(1.01)
   }
+  @include desktop {
+    height: 15em;
+  }
 }
 
 .repo-languages {
@@ -24,6 +27,12 @@
   color: $primary-font-color;
   height: 25%;
   padding: 1.5em 1em 0 1em;
+  @include desktop {
+    padding: .75em 1em 0 1em;
+  }
+  @include landscape-tablet {
+    padding: .8em;
+  }
 }
 
 .repo-list-item-h3 {
@@ -35,9 +44,24 @@
   color: $primary-font-color;
   &:visited {
   color: $primary-font-color;
-}
+  }
+  @include smaller-desktop {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: .9em;
+  }
+  @include landscape-tablet {
+    font-size: .8em;
+  }
 }
 
 .repo-list-item-content {
   padding: 0 0 1.5em 0;
+  @include smaller-desktop {
+    font-size: .9em;
+  }
+  @include landscape-tablet {
+    font-size: .8em;
+    padding: .8em;
+  }
 }

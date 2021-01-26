@@ -21,4 +21,8 @@
     box-shadow: 1px 1px;
     transform: scale(1.01)
   }
+  @include landscape-tablet {
+    font-size: .8em;
+    width: 9em;
+  }
 }
