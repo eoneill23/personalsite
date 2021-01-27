@@ -1,48 +1,41 @@
 @import '../../variables';
 
 .burger-menu-hide {
-  background: red;
+  background: $main;
   height: 100vh;
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: -20em;
   animation: fadeInAnimation ease .5s; 
   animation-iteration-count: 1; 
   animation-fill-mode: forwards; 
-  transform: translate3d(-100vw, 0, 0);
-  width: 20em;
+  width: 20%;
 }
 
 @keyframes fadeInAnimation { 
   0% { 
-    //transform: translate3d(-100vw, 0, 0);
-    //opacity: 0%; 
+    right: 0em; 
   } 
   100% { 
-    //opacity: 100%; 
-    } 
+    right: -20em; 
+  } 
 }
 
 .burger-menu-show {
-  background: red;
+  background: $main;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   right: 0;
-  //transform: translate3d(0vw, 0, 0);
-  // animation: fadeOutAnimation ease .5s; 
-  // animation-iteration-count: 1; 
-  // animation-fill-mode: forwards; 
-    // transition: transform .3s
-    //           cubic-bezier(0, .52, 0, 1);
-  width: 20em;
+  animation: fadeOutAnimation ease .5s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
+  width: 20%;
 }
 
 @keyframes fadeOutAnimation { 
   0% { 
-    //transform: translate3d(0vw, 0, 0);
-    //opacity: 100%; 
+    right: -20em; 
   } 
   100% { 
-    transform: translate3d(110vw, 0, 0);
-    //opacity: 0%; 
+    right: 0em; 
   } 
 }
