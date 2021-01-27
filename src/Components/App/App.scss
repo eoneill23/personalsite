@@ -4,6 +4,7 @@
   background-color: white;
   letter-spacing: .3em;
   padding-bottom: 3em;
+  position: relative;
 }
 
 #contact {
@@ -20,8 +21,8 @@
 }
 
 .contact-img:hover {
-    transform: scale(1.2);
-    transition: background 0.5s, transform 0.3s ease-out, fill 0.5s;
+  transform: scale(1.2);
+  transition: background 0.5s, transform 0.3s ease-out, fill 0.5s;
 }
 
 .contact-header {

@@ -1,0 +1,21 @@
+@import '../../variables';
+
+.burger-menu {
+  background: red;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  animation: fadeInAnimation ease .5s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: backwards; 
+  width: 20em;
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+      opacity: 0; 
+    } 
+    100% { 
+      opacity: 20em; 
+     } 
+}

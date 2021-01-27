@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBar from '../NavBar/NavBar';
 import Content from '../Content/Content';
+import Hamburger from '../Hamburger/Hamburger';
 import ghLogo from '../../assets/github.svg';
 import liLogo from '../../assets/linkedin.svg';
 import resume from '../../assets/resume.svg';
-import resumePDF from '../../assets/Eric_ONeill_Resume.pdf'
+import resumePDF from '../../assets/Eric_ONeill_Resume.pdf';
 import './App.scss';
 
-function App() {
+const App = () => {
+  const [isMenuDisplayed, setMenuDisplay] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuDisplay(!isMenuDisplayed);
+  }
 
   return (
     <main className="main">
-      <NavBar />
+      {isMenuDisplayed && <Hamburger toggleMenu={toggleMenu}/>}
+      <NavBar toggleMenu={toggleMenu}/>
       <Content />
       <footer className="footer-contact" id="contact">
         <h3 className="contact-header">Contact</h3>

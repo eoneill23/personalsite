@@ -14,6 +14,9 @@
   color: $primary-font-color;
   display: block;
   font-size: 2em;
+  @include portrait-tablet {
+    font-size: 1.5em;
+  }
 }
 
 .link-container {
@@ -22,6 +25,12 @@
   height: 100%;
   justify-content: space-around;
   width: 50%;
+  @include portrait-tablet {
+    font-size: .8em;
+  }
+  @include for-phone-only {
+    justify-content: flex-end;
+  }
 }
 
 .nav-link {
@@ -29,6 +38,9 @@
   letter-spacing: .01em;
   text-decoration: none;
   transition: border 500ms ease;
+  @include for-phone-only {
+    display: none;
+  }
 }
 
 .nav-link::after {
@@ -42,4 +54,13 @@
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.burger {
+  display: none;
+  height: 2.5em;
+  width: 2.5em;
+  @include for-phone-only {
+    display: block;
+  }
 }

@@ -8,12 +8,14 @@ $medium-heavy-font-weight: 500;
 $heavy-font-weight: 700;
 $primary-font-color: #F1BE3F;
 
-// @mixin for-phone-only {
-//   @media (max-width: 599px) { @content; }
-// }
-// @mixin for-tablet-portrait-up {
-//   @media (min-width: 600px) { @content; }
-// }
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+
+@mixin portrait-tablet {
+  @media (max-width: 730px) { @content; }
+}
+
 @mixin landscape-tablet {
   @media (max-width: 950px) { @content; }
 }

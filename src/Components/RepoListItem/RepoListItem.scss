@@ -13,7 +13,10 @@
     transform: scale(1.01)
   }
   @include desktop {
-    height: 15em;
+    height: 17em;
+  }
+  @include portrait-tablet {
+    width: 40%;
   }
 }
 

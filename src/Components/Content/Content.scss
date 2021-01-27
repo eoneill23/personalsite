@@ -5,6 +5,9 @@
   letter-spacing: .01em;
   padding: 1em;
   width: 50%;
+  @include portrait-tablet {
+    font-size: .9em;
+  }
 }
 
 .github-repo-list {
@@ -36,11 +39,23 @@
   @include landscape-tablet {
     padding: 0 2em 0 2em;
   }
+  @include portrait-tablet {
+    height: 10em;
+    margin-bottom: 2em;
+    width: 100%;
+  }
+  @include for-phone-only {
+    height: 5em;
+    margin-bottom: 0;
+  }
 }
 
 .skills-header {
   color: $main;
   text-align: center;
+  @include for-phone-only {
+    margin-bottom: 0;
+  }
 }
 
 .skills-list {
@@ -49,6 +64,15 @@
   list-style-type: none;
   justify-content: space-around;
   padding: 0;
+  @include for-phone-only {
+    display: inline-block;
+    height: 5em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+  }
 }
 
 .github-link {
