@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <main className="main">
-      {isMenuDisplayed && <Hamburger toggleMenu={toggleMenu}/>}
+      <Hamburger toggleMenu={toggleMenu} isMenuDisplayed={isMenuDisplayed}/>
       <NavBar toggleMenu={toggleMenu}/>
       <Content />
       <footer className="footer-contact" id="contact">

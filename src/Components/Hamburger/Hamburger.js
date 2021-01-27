@@ -1,10 +1,14 @@
 import React from 'react';
 import './Hamburger.scss';
 
-const HamburgerMenu = ({toggleMenu}) => {
+const HamburgerMenu = ({toggleMenu, isMenuDisplayed}) => {
+  const visibility = isMenuDisplayed ? 'burger-menu-hide' : 'burger-menu-show';
 
   return (
-    <nav className="burger-menu" onClick={toggleMenu}>
+    <nav 
+      className={visibility} 
+      onClick={() => {toggleMenu()}}
+      >
       TEST
     </nav>
   )
