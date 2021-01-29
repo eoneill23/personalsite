@@ -17,6 +17,16 @@
   list-style-type: none;
   padding: 0;
   width: 100%;
+  @include for-phone-only {
+    display: flex;
+    flex-direction: column;
+    height: 17em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+  }
 }
 
 .github-repo-list-container {

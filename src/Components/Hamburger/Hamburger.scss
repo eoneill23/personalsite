@@ -1,41 +1,73 @@
 @import '../../variables';
 
 .burger-menu-hide {
-  background: $main;
-  height: 100vh;
-  position: fixed;
-  right: -20em;
   animation: fadeInAnimation ease .5s; 
   animation-iteration-count: 1; 
   animation-fill-mode: forwards; 
-  width: 20%;
+  background: $main;
+  height: 100%;
+  position: fixed;
+  right: -50%;
+  width: 50%;
+  z-index: 10;
 }
 
 @keyframes fadeInAnimation { 
   0% { 
-    right: 0em; 
+    right: 0%; 
   } 
   100% { 
-    right: -20em; 
+    right: -50%; 
   } 
 }
 
 .burger-menu-show {
-  background: $main;
-  height: 100vh;
-  position: fixed;
-  right: 0;
   animation: fadeOutAnimation ease .5s; 
   animation-iteration-count: 1; 
   animation-fill-mode: forwards; 
-  width: 20%;
+  background: $main;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  width: 50%;
+  z-index: 10;
 }
 
 @keyframes fadeOutAnimation { 
   0% { 
-    right: -20em; 
+    right: -50%; 
   } 
   100% { 
-    right: 0em; 
+    right: 0%; 
   } 
+}
+
+.burger-nav-link-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-around;
+  margin-top: 5em;
+  padding: 1em;
+  width: 100%;
+}
+
+.burger-nav-link {
+  color: $primary-font-color;
+  text-decoration: none;
+  transition: border 500ms ease;
+}
+
+.burger-nav-link::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: $primary-font-color;
+  transition: 500ms;
+}
+
+.burger-nav-link:hover::after {
+  width: 100%;
 }

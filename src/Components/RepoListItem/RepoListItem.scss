@@ -18,11 +18,22 @@
   @include portrait-tablet {
     width: 40%;
   }
+  @include for-phone-only {
+    display: inline-block;
+    height: 15em;
+    text-wrap: wrap;
+    width: 50%;
+  }
 }
 
 .repo-languages {
+  height: 17em;
   list-style-type: none;
+  overflow: scroll;
   padding: 0;
+  @include for-phone-only {
+    height: 80%;
+  }
 }
 
 .repo-list-item-header {
@@ -36,6 +47,10 @@
   @include landscape-tablet {
     padding: .8em;
   }
+}
+
+#repo-list-item-description {
+  word-wrap: break-word !important;
 }
 
 .repo-list-item-h3 {

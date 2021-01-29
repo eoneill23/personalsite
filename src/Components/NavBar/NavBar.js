@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import './NavBar.scss';
 import hamburger from '../../assets/hamburger.svg';
 
-const NavBar = ({toggleMenu}) => {
+const NavBar = ({toggleMenu, isMenuDisplayed}) => {
+  const visibility = isMenuDisplayed ? 'nav-opaque' : 'nav'
+
   return (
-    <nav className="nav">
+    <nav className={visibility}>
       <h1 className="main-title">ERIC O'NEILL</h1>
       <div className="link-container">
         <img src={hamburger} onClick={() => { toggleMenu() }} className="burger"/>

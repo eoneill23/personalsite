@@ -1,12 +1,5 @@
 @import '../../variables';
 
-.main {
-  background-color: white;
-  letter-spacing: .3em;
-  padding-bottom: 3em;
-  position: relative;
-}
-
 #contact {
   color: $main;
   letter-spacing: .1em;
@@ -27,4 +20,9 @@
 
 .contact-header {
   margin-bottom: .5em;
+}
+
+.content-opaque {
+  overflow: hidden;
+  opacity: 40%
 }

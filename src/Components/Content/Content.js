@@ -6,11 +6,13 @@ import { pageContent, skills } from '../../content';
 import RepoListItem from '../RepoListItem/RepoListItem';
 import mockGhData from '../../utils/mockGHData';
 
-const Content = () => {
+const Content = ({isMenuDisplayed}) => {
   const [githubRepos, setGitHubRepos] = useState([]);
   const [skillList, setSkills] = useState([]);
-  const [isLoadingRepos, setLoadingRepos] = useState(true)
+  const [isLoadingRepos, setLoadingRepos] = useState(true);
   const { homeContent, aboutContent } = pageContent;
+  const visibility = isMenuDisplayed ? 'content-opaque' : '';
+  const isScrollable = isMenuDisplayed ? 'no' : 'yes';
 
   const getGitHubRepos = async () => {
     let repos = await fetchRepos();
@@ -39,7 +41,7 @@ const Content = () => {
   }, []);
 
   return (
-    <section>
+    <section className={visibility} >
       <section className="main-content" id="home">
         <h2 className="">{homeContent.title}</h2>
         <p>
@@ -57,7 +59,7 @@ const Content = () => {
       <section className="github-repo-list-container" id="skills-github">
         <h3>Check out my recent work on GitHub:</h3>
         {isLoadingRepos && <h3>Loading repos...</h3>}
-        {githubRepos && (
+        {githubRepos.length > 0 && (
           <ul className="github-repo-list">{githubRepos}</ul>
         )}
         {!isLoadingRepos && !githubRepos.length && (
@@ -69,7 +71,7 @@ const Content = () => {
                 rel="noopener noreferrer"
                 className="github-link"
               >
-                Check out my Github repo here.
+                Check out my Github here.
               </a>
             </h3>
           )}

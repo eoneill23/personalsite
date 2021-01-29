@@ -64,3 +64,14 @@
     display: block;
   }
 }
+
+.nav-opaque {
+  align-items: center;
+  background-color: $main;
+  display: flex;
+  height: 15%;
+  justify-content: space-between;
+  opacity: 40%;
+  padding: 20px;
+  text-align: center;
+}

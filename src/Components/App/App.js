@@ -16,10 +16,10 @@ const App = () => {
   }
 
   return (
-    <main className="main">
+    <main>
       <Hamburger toggleMenu={toggleMenu} isMenuDisplayed={isMenuDisplayed}/>
-      <NavBar toggleMenu={toggleMenu}/>
-      <Content />
+      <NavBar toggleMenu={toggleMenu} isMenuDisplayed={isMenuDisplayed} />
+      <Content isMenuDisplayed={isMenuDisplayed} />
       <footer className="footer-contact" id="contact">
         <h3 className="contact-header">Contact</h3>
         <a

@@ -14,6 +14,10 @@ body {
   margin: auto;
 }
 
+.stop-scroll {
+  overflow: hidden;
+}
+
 @keyframes fadeInAnimation { 
     0% { 
         opacity: 0; 
