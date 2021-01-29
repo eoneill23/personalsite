@@ -1,21 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './NavBar.scss';
-import hamburger from '../../assets/hamburger.svg';
 
 const NavBar = ({toggleMenu, isMenuDisplayed}) => {
-  const visibility = isMenuDisplayed ? 'nav-opaque' : 'nav';
-  const spanActive = isMenuDisplayed ? 'span-active' : 'span-inactive';
+  const containerActive = isMenuDisplayed ? 'link-container' : 'link-container-active';
 
   return (
-    <nav className={visibility}>
+    <nav className="nav">
       <h1 className="main-title">ERIC O'NEILL</h1>
-      <div className="link-container" onClick={() => { toggleMenu() }}>
-        
-          <span className={spanActive} id="nav-icon1"></span>
-          <span className={spanActive} id="nav-icon2"></span>
-          <span className={spanActive} id="nav-icon3"></span>
-        
-        {/* <img src={hamburger} onClick={() => { toggleMenu() }} className="burger"/> */}
+      <div className={containerActive} id="link-container"onClick={() => { toggleMenu() }}>
+          <span className="span-burger" id="nav-icon1"></span>
+          <span className="span-burger" id="nav-icon2"></span>
+          <span className="span-burger" id="nav-icon3"></span>
         <a href="#home" className="nav-link">Home</a>
         <a href="#skills" className="nav-link">Skills/GitHub</a>
         <a href="#contact" className="nav-link">Contact</a>
