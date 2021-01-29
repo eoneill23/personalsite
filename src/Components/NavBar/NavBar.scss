@@ -29,7 +29,10 @@
     font-size: .8em;
   }
   @include for-phone-only {
-    justify-content: flex-end;
+    flex-direction: column;
+    height: 2.5em;
+    justify-content: space-around;
+    //justify-content: flex-end;
   }
 }
 
@@ -74,4 +77,23 @@
   opacity: 40%;
   padding: 20px;
   text-align: center;
+}
+
+.burger-2 {
+  height: 10em;
+  width: 10em;
+}
+
+.span-inactive {
+  background-color: white;
+  border-radius: 20%;
+  height: .3em;
+  margin-left: auto;
+  width: 18%;
+}
+
+#nav-icon1:hover {
+  transform: ease rotate(45deg);
+  top: -3px;
+  left: 8px;
 }
