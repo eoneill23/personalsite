@@ -11,11 +11,10 @@
   margin: 0 .5em 0 .5em;
   transition: background 0.5s, transform 0.5s ease-out, fill 0.5s;
   width: 2em;
-}
-
-.contact-img:hover {
-  transform: scale(1.2);
-  transition: background 0.5s, transform 0.3s ease-out, fill 0.5s;
+  &:hover {
+    transform: scale(1.2);
+    transition: background 0.5s, transform 0.3s ease-out, fill 0.5s;
+  }
 }
 
 .contact-header {

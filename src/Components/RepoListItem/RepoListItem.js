@@ -33,7 +33,7 @@ const RepoListItem = ({repoItem}) => {
           </h3>
         </header>
         <section id="repo-list-item-content">
-          <p className="repo-list-item-description">{description}</p>
+          <p id="repo-list-item-description">{description}</p>
           <h3>Built with:</h3>
           <ul className="repo-languages">
             {repoLanguages && repoLanguages.map((language, index) => {

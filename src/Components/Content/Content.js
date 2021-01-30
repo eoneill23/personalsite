@@ -12,7 +12,6 @@ const Content = ({isMenuDisplayed}) => {
   const [isLoadingRepos, setLoadingRepos] = useState(true);
   const { homeContent, aboutContent } = pageContent;
   const visibility = isMenuDisplayed ? 'content-opaque' : '';
-  const isScrollable = isMenuDisplayed ? 'no' : 'yes';
 
   const getGitHubRepos = async () => {
     let repos = await fetchRepos();
@@ -50,6 +49,7 @@ const Content = ({isMenuDisplayed}) => {
         </p>
         <p>{aboutContent.content}</p>
         <p>{aboutContent.secondaryContent}</p>
+        <p>{aboutContent.educationContent}</p>
         <p>{aboutContent.tertiaryContent}</p>
       </section>
       <section className="skills" id="skills">

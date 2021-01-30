@@ -49,10 +49,6 @@
   }
 }
 
-#repo-list-item-description {
-  word-wrap: break-word !important;
-}
-
 .repo-list-item-h3 {
   color: $primary-font-color;
   margin: 0;
@@ -73,7 +69,7 @@
   }
 }
 
-.repo-list-item-content {
+#repo-list-item-content {
   padding: 0 0 1.5em 0;
   @include smaller-desktop {
     font-size: .9em;
@@ -81,5 +77,8 @@
   @include landscape-tablet {
     font-size: .8em;
     padding: .8em;
+  }
+  @include for-phone-only {
+    height: 80%;
   }
 }
